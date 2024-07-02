@@ -1,9 +1,14 @@
 import React from 'react'
-
-const todos = () => {
+import TodoItem from "./TodoItem";
+const todos = (props) => {
   return (
-    <div>
-      Todos Works
+    <div className="Container">
+      <h3 className="text-center my-3">Todos Works</h3>
+      {props.todos.length==0 ? "No Tasks Hurraayyy!!": 
+      props.todos.map((todo)=>{
+        return <TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete}/>
+      })
+    }
     </div>
   )
 }
