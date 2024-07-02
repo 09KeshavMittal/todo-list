@@ -3,10 +3,10 @@ import TodoItem from "./TodoItem";
 const todos = (props) => {
   return (
     <div className="Container">
-      <h3 className="text-center my-3">Todos Works</h3>
+      <h3 className="my-10">Todos </h3>
       {props.todos.length==0 ? "No Tasks Hurraayyy!!": 
       props.todos.map((todo)=>{
-        return <TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete}/>
+        return <TodoItem todo={todo} key={todo.sr} onDelete={props.onDelete}/>
       })
     }
     </div>
